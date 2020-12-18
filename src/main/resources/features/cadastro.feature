@@ -28,7 +28,7 @@ Funcionalidade: Cadastro de cliente
   
   @SAR_001C @CadastroCliente
   Esquema do Cenario: SAR_001C-Cadastro_de_cliente_verificar_radio_button
-  Quando eu entro os dados incluindo CEP <cep> e Número da casa <numeroCasa>
+  Quando eu entro os dados incluindo CEP <CEP> e Número da casa <numeroCasa>
   Então valido o radio button de receber ou não ofertas
     
     Exemplos: 

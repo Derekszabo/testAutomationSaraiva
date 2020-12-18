@@ -4,7 +4,9 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.openqa.selenium.OutputType;
 import org.openqa.selenium.StaleElementReferenceException;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -18,6 +20,10 @@ public class SeleniumActions {
 
 	public SeleniumActions(WebDriver driver) {
 		this.driver = driver;
+	}
+
+	public WebDriver getWebDriver() {
+		return driver;
 	}
 
 	public void navigateToUrl(String url) {
@@ -70,6 +76,19 @@ public class SeleniumActions {
 			driver.switchTo().window(abas.get(indiceDaAba));
 		} catch (IndexOutOfBoundsException e) {
 			System.out.println("Index out of bounds");
+		}
+	}
+
+	public void closeCurrentWindow() {
+		driver.close();
+	}
+
+	public byte[] getScreenshot() {
+		try {
+			return ((TakesScreenshot) getWebDriver()).getScreenshotAs(OutputType.BYTES);
+		} catch (Exception e) {
+			System.out.println("screeshot failed");
+			return null;
 		}
 	}
 
