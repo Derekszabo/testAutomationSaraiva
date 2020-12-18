@@ -1,46 +1,38 @@
 #language: pt
-#Author: your.email@your.domain.com
-#Keywords Summary :
-#Feature: List of scenarios.
-#Scenario: Business rule through list of steps with arguments.
-#Given: Some precondition step
-#When: Some key actions
-#Then: To observe outcomes or validation
-#And,But: To enumerate more Given,When,Then steps
-#Scenario Outline: List of steps for data-driven as an Examples and <placeholder>
-#Examples: Container for s table
-#Background: List of steps run before each of the scenarios
-#""" (Doc Strings)
-#| (Data Tables)
-#@ (Tags/Labels):To group Scenarios
-#<> (placeholder)
-#""
-## (Comments)
-#Sample Feature Definition Template
 
-@tag
+@Cadastro
 Funcionalidade: Cadastro de cliente
   Eu como cliente gostaria de efetuar o cadastro
   Para comprar na loja virtual da Saraiva
-  Ent�o a p�gina deve seguir os crit�rios de aceita��o requeridos
+  Então a página deve seguir os critérios de aceitação requeridos
 
   Contexto: Possibilidade de se cadastrar no sistema
-    Dado que o usu�rio entre no site
-    E entre na �rea de cadastro de cliente
+    Dado que o usuário entre no site
+    E entre na área de cadastro de cliente
 
-  @tag1
-  Cenario: SAR_001-Cadastro_de_cliente
-  Quando eu entro os dados
+  @SAR_001 @CadastroCliente
+  Esquema do Cenario: SAR_001-Cadastro_de_cliente
+  Quando eu entro os dados incluindo CEP <cep> e Número da casa <numeroCasa>
+  E submeto o cadastro
+  Então valido o cadastro de cliente com sucesso
   
-
-  @tag2
-  Esquema do Cenario: Title of your scenario outline
-    Given I want to write a step with <name>
-    When I check for the <value> in step
-    Then I verify the <status> in step
+  @SAR_001A @ValidaCores
+  Esquema do Cenario: SAR_001A-Valida_cores_pagina
+    Então valido as cores da página
     
-    Examples: 
+  @SAR_001B @CadastroClienteIncompleto
+  Esquema do Cenario: SAR_001B-Cadastro_de_cliente_incompleto
+  Quando eu entro os dados incompletos na página
+  E submeto o cadastro
+  Então valido os asteriscos vermelhos em campos obrigatórios
+  
+  @SAR_001C @CadastroCliente
+  Esquema do Cenario: SAR_001C-Cadastro_de_cliente_verificar_radio_button
+  Quando eu entro os dados incluindo CEP <cep> e Número da casa <numeroCasa>
+  Então valido o radio button de receber ou não ofertas
+    
+    Exemplos: 
       | CEP  | numeroCasa |
       | 06050150 |     83 |
-      | 11702-850 |     3604 | 
+      | 11702850 |     3604 | 
 
