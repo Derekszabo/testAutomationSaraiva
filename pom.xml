@@ -18,7 +18,11 @@
 			<artifactId>guava</artifactId>
 			<version>25.0-jre</version>
 		</dependency>
-
+<dependency>
+			<groupId>org.yaml</groupId>
+			<artifactId>snakeyaml</artifactId>
+			<version>1.21</version>
+		</dependency>
 		<dependency>
 
 			<groupId>org.seleniumhq.selenium</groupId>
@@ -57,6 +61,13 @@
 			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-jvm-deps</artifactId>
 			<version>1.0.6</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-junit</artifactId>
+			<version>3.0.2</version>
+			<scope>test</scope>
 		</dependency>
 
 		<dependency>

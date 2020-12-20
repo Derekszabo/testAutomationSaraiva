@@ -3,6 +3,8 @@ package br.com.saraiva.core.utils;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.NoSuchElementException;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.StaleElementReferenceException;
@@ -90,6 +92,45 @@ public class SeleniumActions {
 			System.out.println("screeshot failed");
 			return null;
 		}
+	}
+
+	public Boolean waitForElementToDissapear(WebElement element, Integer secondsTimeout) {
+		lowerTimeouts();
+		Boolean dissapeared = false;
+		Integer counter = 0;
+		try {
+			while (counter < secondsTimeout && Boolean.FALSE.equals(dissapeared)) {
+				if (!element.isDisplayed()
+						|| (element.getSize().getWidth() == 0 && element.getSize().getHeight() == 0)) {
+					dissapeared = true;
+				}
+				sleep(1);
+				counter++;
+			}
+		} catch (NoSuchElementException | StaleElementReferenceException e) {
+			dissapeared = true;
+		}
+		raiseTimeouts();
+		return dissapeared;
+	}
+
+	public void sleep(Integer seconds) {
+		try {
+			Thread.sleep(seconds * 1000l);
+		} catch (InterruptedException e) {
+			Thread.currentThread().interrupt();
+		}
+
+	}
+
+	public void raiseTimeouts() {
+		driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+	}
+
+	public void lowerTimeouts() {
+		driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(100, TimeUnit.MILLISECONDS);
 	}
 
 }

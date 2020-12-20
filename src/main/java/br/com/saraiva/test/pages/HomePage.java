@@ -9,7 +9,7 @@ import lombok.Getter;
 @Getter
 public class HomePage implements PageMaker {
 
-	@FindBy(id = "link-account")
+	@FindBy(xpath = "//a[@id='link-account']")
 	WebElement btnLogin;
 
 	@FindBy(id = "vtexIdUI-saraiva-oauth")

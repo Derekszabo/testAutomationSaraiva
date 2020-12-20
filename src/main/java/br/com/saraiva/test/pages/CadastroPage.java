@@ -4,11 +4,16 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import br.com.saraiva.core.webdriver.PageMaker;
+import lombok.Getter;
 
+@Getter
 public class CadastroPage implements PageMaker {
 
 	@FindBy(xpath = "//a[contains(text(),'CADASTRAR')]")
 	WebElement btnCadastrar;
+
+	@FindBy(xpath = "//button[@id='submit-1']")
+	WebElement btnEntrar;
 
 	@FindBy(xpath = "//input[@id='InputNome1']")
 	WebElement fldNome;
@@ -45,5 +50,17 @@ public class CadastroPage implements PageMaker {
 
 	@FindBy(xpath = "//button[@id='FinalizarCadastro1']")
 	WebElement btnFinalizarCadastro;
+
+	@FindBy(xpath = "//body/div[2]")
+	WebElement header;
+
+	@FindBy(xpath = "//header/h1[1]/a[1]/*[1]")
+	WebElement btnHeader;
+
+	@FindBy(xpath = "//small[contains(text(),'Informe o nome')]")
+	WebElement lblErroNome;
+
+	@FindBy(xpath = "/html/body/div[1]/img")
+	WebElement imgLoadScreen;
 
 }

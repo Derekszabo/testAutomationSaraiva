@@ -10,7 +10,6 @@ public class DriverManagerFactory {
 
 	public static DriverManager getDriver() {
 		driverManager = new SetupChrome();
-		tearDownCurrentManagerIfExistent();
 		return driverManager;
 
 	}
