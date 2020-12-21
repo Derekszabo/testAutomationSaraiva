@@ -9,8 +9,12 @@ public class DriverManagerFactory {
 	private static DriverManager driverManager;
 
 	public static DriverManager getDriver() {
-		driverManager = new SetupChrome();
-		return driverManager;
+		if (driverManager != null) {
+			return driverManager;
+		} else {
+			driverManager = new SetupChrome();
+			return driverManager;
+		}
 
 	}
 

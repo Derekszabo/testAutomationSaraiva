@@ -1,6 +1,7 @@
 package br.com.saraiva.test.runners.hooks;
 
 import static br.com.saraiva.test.steps.support.Context.gen;
+import static br.com.saraiva.test.steps.support.Context.web;
 
 import java.util.Arrays;
 import java.util.LinkedList;
@@ -41,7 +42,7 @@ public abstract class TestNGHooks {
 	@Test(groups = "cucumber", description = "Cucumber IBPF Scenarios", dataProvider = "mergedScenariosTestData")
 	public void runScenario(TestData testData, PickleEventWrapper pickleWrapper, CucumberFeatureWrapper featureWrapper)
 			throws Throwable {
-		testName = pickleWrapper.toString();
+		testName = pickleWrapper.toString().replace("\"", "");
 		Context.setTestData(testData);
 		Context.setup();
 		System.out.println(featureWrapper.toString() + ": " + testName);
@@ -55,7 +56,8 @@ public abstract class TestNGHooks {
 			status = "Failed";
 		}
 		System.out.println("Test Status: " + status);
-		gen().saveEvidence(testName, status.toString().toUpperCase());
+		gen().saveEvidence(testName, status.toString().toUpperCase(), web().getScreenshot());
+		web().closeAllOtherTabs();
 	}
 
 	@AfterClass(alwaysRun = true)

@@ -11,14 +11,15 @@ public class Context {
 	private static SeleniumActions web;
 	private static EvidencesGenerator gen;
 	private static DriverManager driverManager;
-	private static String testName;
 	private static TestData testData;
+	@SuppressWarnings("unused")
 	private static MassaYaml massa;
 
 	public static void setup() {
 		driverManager = DriverManagerFactory.getDriver();
 		web = new SeleniumActions(driverManager.getDriver());
 		massa = (MassaYaml) Context.testData();
+		gen = new EvidencesGenerator();
 	}
 
 	public static SeleniumActions web() {

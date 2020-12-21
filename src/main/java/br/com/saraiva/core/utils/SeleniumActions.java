@@ -1,11 +1,19 @@
 package br.com.saraiva.core.utils;
 
+import static org.testng.Assert.assertTrue;
+import static org.testng.Assert.fail;
+
+import java.io.File;
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.NoSuchElementException;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.TakesScreenshot;
@@ -85,9 +93,9 @@ public class SeleniumActions {
 		driver.close();
 	}
 
-	public byte[] getScreenshot() {
+	public File getScreenshot() {
 		try {
-			return ((TakesScreenshot) getWebDriver()).getScreenshotAs(OutputType.BYTES);
+			return ((TakesScreenshot) getWebDriver()).getScreenshotAs(OutputType.FILE);
 		} catch (Exception e) {
 			System.out.println("screeshot failed");
 			return null;
@@ -133,4 +141,56 @@ public class SeleniumActions {
 		driver.manage().timeouts().implicitlyWait(100, TimeUnit.MILLISECONDS);
 	}
 
+	public void validate(boolean variable) {
+		assertTrue(variable);
+	}
+
+	public void validate(WebElement element) {
+		waitForElementToBeDisplayed(element);
+		assertTrue(isDisplayed(element));
+	}
+
+	public void insertKey(WebElement element, Keys key) {
+		this.fluentlyWaitUntilClickable(element).sendKeys(key);
+	}
+
+	public void sendTab(WebElement element) {
+		insertKey(element, Keys.TAB);
+	}
+
+	public void closeAllOtherTabs() {
+		try {
+			Set<String> tabs = driver.getWindowHandles();
+			Iterator<String> iter = tabs.iterator();
+			String[] tabNames = new String[tabs.size()];
+			int i = 0;
+			while (iter.hasNext()) {
+				tabNames[i] = iter.next();
+				i++;
+			}
+
+			if (tabNames.length > 1) {
+				for (i = tabNames.length; i > 1; i--) {
+					driver.switchTo().window(tabNames[i - 1]);
+					driver.close();
+				}
+			}
+			driver.switchTo().window(tabNames[0]);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	public void failTest() {
+		fail();
+	}
+
+	public void scroll(WebElement element) {
+		executeJS("arguments[0].scrollIntoView(true);", element);
+	}
+
+	public Object executeJS(String cmd, Object... param) {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		return js.executeScript(cmd, param);
+	}
 }

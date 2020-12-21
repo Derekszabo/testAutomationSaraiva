@@ -2,19 +2,19 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="23290" started-at="2020-12-20T23:42:56Z" finished-at="2020-12-20T23:43:19Z">
+  <suite name="Default suite" duration-ms="30045" started-at="2020-12-21T23:55:19Z" finished-at="2020-12-21T23:55:49Z">
     <groups>
       <group name="cucumber">
         <method signature="TestNGHooks.runScenario(br.com.saraiva.core.yaml.entity.TestData, io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:br.com.saraiva.test.runners.CadastroRunner@5f2108b5]" name="runScenario" class="br.com.saraiva.test.runners.hooks.TestNGHooks"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="Default test" duration-ms="23290" started-at="2020-12-20T23:42:56Z" finished-at="2020-12-20T23:43:19Z">
+    <test name="Default test" duration-ms="30045" started-at="2020-12-21T23:55:19Z" finished-at="2020-12-21T23:55:49Z">
       <class name="br.com.saraiva.test.runners.CadastroRunner">
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:br.com.saraiva.test.runners.CadastroRunner@5f2108b5]" name="setUpClass" is-config="true" duration-ms="174" started-at="2020-12-20T23:42:56Z" finished-at="2020-12-20T23:42:56Z">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:br.com.saraiva.test.runners.CadastroRunner@5f2108b5]" name="setUpClass" is-config="true" duration-ms="164" started-at="2020-12-21T23:55:19Z" finished-at="2020-12-21T23:55:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="PASS" signature="runScenario(br.com.saraiva.core.yaml.entity.TestData, io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:br.com.saraiva.test.runners.CadastroRunner@5f2108b5]" name="runScenario" duration-ms="21522" started-at="2020-12-20T23:42:56Z" description="Cucumber IBPF Scenarios" data-provider="mergedScenariosTestData" finished-at="2020-12-20T23:43:18Z">
+        <test-method status="PASS" signature="runScenario(br.com.saraiva.core.yaml.entity.TestData, io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:br.com.saraiva.test.runners.CadastroRunner@5f2108b5]" name="runScenario" duration-ms="27926" started-at="2020-12-21T23:55:19Z" description="Cucumber IBPF Scenarios" data-provider="mergedScenariosTestData" finished-at="2020-12-21T23:55:47Z">
           <params>
             <param index="0">
               <value>
@@ -23,7 +23,7 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA["SAR_001A-Valida_cores_pagina"]]>
+                <![CDATA["SAR_0104-Cadastro_de_cliente_ja_cadastrado"]]>
               </value>
             </param>
             <param index="2">
@@ -35,7 +35,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="afterScenario(org.testng.ITestResult, org.testng.ITestContext)[pri:0, instance:br.com.saraiva.test.runners.CadastroRunner@5f2108b5]" name="afterScenario" is-config="true" duration-ms="1" started-at="2020-12-20T23:43:18Z" finished-at="2020-12-20T23:43:18Z">
+        <test-method status="PASS" signature="afterScenario(org.testng.ITestResult, org.testng.ITestContext)[pri:0, instance:br.com.saraiva.test.runners.CadastroRunner@5f2108b5]" name="afterScenario" is-config="true" duration-ms="475" started-at="2020-12-21T23:55:47Z" finished-at="2020-12-21T23:55:48Z">
           <params>
             <param index="0">
               <value>
@@ -44,14 +44,14 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@5a62b2a4]]>
+                <![CDATA[org.testng.TestRunner@13047d7d]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterScenario -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:br.com.saraiva.test.runners.CadastroRunner@5f2108b5]" name="tearDownClass" is-config="true" duration-ms="1368" started-at="2020-12-20T23:43:18Z" finished-at="2020-12-20T23:43:19Z">
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:br.com.saraiva.test.runners.CadastroRunner@5f2108b5]" name="tearDownClass" is-config="true" duration-ms="1271" started-at="2020-12-21T23:55:48Z" finished-at="2020-12-21T23:55:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
