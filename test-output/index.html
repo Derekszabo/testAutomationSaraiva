@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Default_suite">
-              <span class="suite-name border-passed">Default suite</span>
+              <span class="suite-name border-failed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\derek.szabo\AppData\Local\Temp\testng-eclipse-1859126892\testng-customsuite.xml</span>
+                    <span>C:\Users\derek.szabo\AppData\Local\Temp\testng-eclipse--583815124\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,21 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods passed suite-Default_suite"> (hide)</a> <!-- hide-methods passed suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
                     </span>
-                    <div class="method-list-content passed suite-Default_suite">
+                    <div class="method-list-content failed suite-Default_suite">
                       <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="br.com.saraiva.test.runners.CadastroRunner" hash-for-method="runScenario(MassaYaml(id=1, nome=Senhor, sobrenome=Barriga, email=senhorbarriga@gmail.com, senha=Vila0123@@, cpf...)">runScenario(MassaYaml(id=1, nome=Senhor, sobrenome=Barriga, email=senhorbarriga@gmail.com, senha=Vila0123@@, cpf...)</a> <!-- method navigator-link -->
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="br.com.saraiva.test.runners.BuscaProdutoRunner" hash-for-method="runScenario(MassaYaml(id=1, nome=Senhor, sobrenome=Barriga, email=senhorbarriga@gmail.com, senha=Vila0123@@, cpf...)">runScenario(MassaYaml(id=1, nome=Senhor, sobrenome=Barriga, email=senhorbarriga@gmail.com, senha=Vila0123@@, cpf...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Default_suite -->
+                    </div> <!-- method-list-content failed suite-Default_suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -117,10 +117,10 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-passed">
+          <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">br.com.saraiva.test.runners.CadastroRunner</span>
+              <img src="failed.png"/>
+              <span class="class-name">br.com.saraiva.test.runners.BuscaProdutoRunner</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -128,17 +128,48 @@
                   <a name="runScenario(MassaYaml(id=1, nome=Senhor, sobrenome=Barriga, email=senhorbarriga@gmail.com, senha=Vila0123@@, cpf...)">
                   </a> <!-- runScenario(MassaYaml(id=1, nome=Senhor, sobrenome=Barriga, email=senhorbarriga@gmail.com, senha=Vila0123@@, cpf...) -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">(MassaYaml(id=1, nome=Senhor, sobrenome=Barriga, email=senhorbarriga@gmail.com, senha=Vila0123@@, cpf=50261378651, sexo=M, dataNascimento=01031970, telefone=11998766543, CEP=11702850, numeroCasa=3604), "SAR_0104-Cadastro_de_cliente_ja_cadastrado", "Cadastro")</span>
+                  <span class="parameters">(MassaYaml(id=1, nome=Senhor, sobrenome=Barriga, email=senhorbarriga@gmail.com, senha=Vila0123@@, cpf=50261378651, sexo=M, dataNascimento=01031970, telefone=11998766543, CEP=11702850, numeroCasa=3604), "SAR_TESTE-Busca_livro_fisico", "BuscaProduto")</span>
+                  <div class="stack-trace">org.openqa.selenium.InvalidElementStateException: invalid element state
+  (Session info: chrome=87.0.4280.88)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;SKAR1200667&apos;, ip: &apos;192.168.15.32&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\Users\DEREK~1.SZA\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:60248}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 12f626f3b16fc542ba10a12a58fba10b
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.clear(RemoteWebElement.java:124)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy19.clear(Unknown Source)
+	at br.com.saraiva.core.utils.SeleniumActions.insertText(SeleniumActions.java:63)
+	at br.com.saraiva.test.logic.HomeLogic.buscaProduto(HomeLogic.java:36)
+	at br.com.saraiva.test.steps.BuscaProdutoSteps.busco_pelo_livro_e_submeto(BuscaProdutoSteps.java:23)
+	at ✽.busco pelo livro &quot;harry poter&quot; e submeto(classpath:features/buscaProduto.feature:18)
+
+</div> <!-- stack-trace -->
                   <em>
 (Cucumber IBPF Scenarios)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-passed -->
+          </div> <!-- suite-Default_suite-class-failed -->
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\derek.szabo\AppData\Local\Temp\testng-eclipse-1859126892\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\derek.szabo\AppData\Local\Temp\testng-eclipse--583815124\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -147,7 +178,7 @@
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
   &lt;test thread-count=&quot;5&quot; verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;br.com.saraiva.test.runners.CadastroRunner&quot;/&gt;
+      &lt;class name=&quot;br.com.saraiva.test.runners.BuscaProdutoRunner&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -198,13 +229,13 @@ data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
-data.setCell(0, 2, 'br.com.saraiva.test.runners.CadastroRunner')
-data.setCell(0, 3, 27926);
+data.setCell(0, 2, 'br.com.saraiva.test.runners.BuscaProdutoRunner')
+data.setCell(0, 3, 22901);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 27 seconds</span>
+              <span class="suite-total-time">Total running time: 22 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -230,22 +261,24 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">br.com.saraiva.test.runners.CadastroRunner</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">br.com.saraiva.test.runners.BuscaProdutoRunner</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUpClass</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">runScenario(MassaYaml(id=1, nome=Senhor, sobrenome=Barriga, email=senhorbarriga@gmail.com, senha=Vila0123@@, cpf...)</span>
-                <span class="method-start">356 ms</span>
+                <span class="method-start">403 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterScenario([TestResult name=runScenario status=SUCCESS method=TestNGHooks.runScenario(br.com.saraiva.core.yaml....)</span>
-                <span class="method-start">28284 ms</span>
+                <span class="method-name">afterScenario([TestResult name=runScenario status=FAILURE method=TestNGHooks.runScenario(br.com.saraiva.core.yaml....)</span>
+                <span class="method-start">23307 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">28760 ms</span>
+                <span class="method-start">23912 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

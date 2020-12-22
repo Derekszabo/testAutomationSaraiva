@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="30045" started-at="2020-12-21T23:55:19Z" finished-at="2020-12-21T23:55:49Z">
+  <suite name="Default suite" duration-ms="25344" started-at="2020-12-22T05:07:59Z" finished-at="2020-12-22T05:08:24Z">
     <groups>
       <group name="cucumber">
-        <method signature="TestNGHooks.runScenario(br.com.saraiva.core.yaml.entity.TestData, io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:br.com.saraiva.test.runners.CadastroRunner@5f2108b5]" name="runScenario" class="br.com.saraiva.test.runners.hooks.TestNGHooks"/>
+        <method signature="TestNGHooks.runScenario(br.com.saraiva.core.yaml.entity.TestData, io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:br.com.saraiva.test.runners.BuscaProdutoRunner@1e127982]" name="runScenario" class="br.com.saraiva.test.runners.hooks.TestNGHooks"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="Default test" duration-ms="30045" started-at="2020-12-21T23:55:19Z" finished-at="2020-12-21T23:55:49Z">
-      <class name="br.com.saraiva.test.runners.CadastroRunner">
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:br.com.saraiva.test.runners.CadastroRunner@5f2108b5]" name="setUpClass" is-config="true" duration-ms="164" started-at="2020-12-21T23:55:19Z" finished-at="2020-12-21T23:55:19Z">
+    <test name="Default test" duration-ms="25344" started-at="2020-12-22T05:07:59Z" finished-at="2020-12-22T05:08:24Z">
+      <class name="br.com.saraiva.test.runners.BuscaProdutoRunner">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:br.com.saraiva.test.runners.BuscaProdutoRunner@1e127982]" name="setUpClass" is-config="true" duration-ms="177" started-at="2020-12-22T05:07:59Z" finished-at="2020-12-22T05:07:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="PASS" signature="runScenario(br.com.saraiva.core.yaml.entity.TestData, io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:br.com.saraiva.test.runners.CadastroRunner@5f2108b5]" name="runScenario" duration-ms="27926" started-at="2020-12-21T23:55:19Z" description="Cucumber IBPF Scenarios" data-provider="mergedScenariosTestData" finished-at="2020-12-21T23:55:47Z">
+        <test-method status="FAIL" signature="runScenario(br.com.saraiva.core.yaml.entity.TestData, io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:br.com.saraiva.test.runners.BuscaProdutoRunner@1e127982]" name="runScenario" duration-ms="22901" started-at="2020-12-22T05:07:59Z" description="Cucumber IBPF Scenarios" data-provider="mergedScenariosTestData" finished-at="2020-12-22T05:08:22Z">
           <params>
             <param index="0">
               <value>
@@ -23,39 +23,82 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA["SAR_0104-Cadastro_de_cliente_ja_cadastrado"]]>
+                <![CDATA["SAR_TESTE-Busca_livro_fisico"]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA["Cadastro"]]>
+                <![CDATA["BuscaProduto"]]>
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.InvalidElementStateException">
+            <message>
+              <![CDATA[invalid element state
+  (Session info: chrome=87.0.4280.88)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'SKAR1200667', ip: '192.168.15.32', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\Users\DEREK~1.SZA\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:60248}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 12f626f3b16fc542ba10a12a58fba10b]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.InvalidElementStateException: invalid element state
+  (Session info: chrome=87.0.4280.88)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'SKAR1200667', ip: '192.168.15.32', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\Users\DEREK~1.SZA\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:60248}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 12f626f3b16fc542ba10a12a58fba10b
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+at org.openqa.selenium.remote.RemoteWebElement.clear(RemoteWebElement.java:124)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at com.sun.proxy.$Proxy19.clear(Unknown Source)
+at br.com.saraiva.core.utils.SeleniumActions.insertText(SeleniumActions.java:63)
+at br.com.saraiva.test.logic.HomeLogic.buscaProduto(HomeLogic.java:36)
+at br.com.saraiva.test.steps.BuscaProdutoSteps.busco_pelo_livro_e_submeto(BuscaProdutoSteps.java:23)
+at ✽.busco pelo livro "harry poter" e submeto(classpath:features/buscaProduto.feature:18)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.InvalidElementStateException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="afterScenario(org.testng.ITestResult, org.testng.ITestContext)[pri:0, instance:br.com.saraiva.test.runners.CadastroRunner@5f2108b5]" name="afterScenario" is-config="true" duration-ms="475" started-at="2020-12-21T23:55:47Z" finished-at="2020-12-21T23:55:48Z">
+        <test-method status="PASS" signature="afterScenario(org.testng.ITestResult, org.testng.ITestContext)[pri:0, instance:br.com.saraiva.test.runners.BuscaProdutoRunner@1e127982]" name="afterScenario" is-config="true" duration-ms="604" started-at="2020-12-22T05:08:22Z" finished-at="2020-12-22T05:08:23Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=runScenario status=SUCCESS method=TestNGHooks.runScenario(br.com.saraiva.core.yaml.entity.TestData, io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:br.com.saraiva.test.runners.CadastroRunner@5f2108b5] output={null}]]]>
+                <![CDATA[[TestResult name=runScenario status=FAILURE method=TestNGHooks.runScenario(br.com.saraiva.core.yaml.entity.TestData, io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:br.com.saraiva.test.runners.BuscaProdutoRunner@1e127982] output={null}]]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@13047d7d]]>
+                <![CDATA[org.testng.TestRunner@1f2d2181]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterScenario -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:br.com.saraiva.test.runners.CadastroRunner@5f2108b5]" name="tearDownClass" is-config="true" duration-ms="1271" started-at="2020-12-21T23:55:48Z" finished-at="2020-12-21T23:55:49Z">
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:br.com.saraiva.test.runners.BuscaProdutoRunner@1e127982]" name="tearDownClass" is-config="true" duration-ms="1411" started-at="2020-12-22T05:08:23Z" finished-at="2020-12-22T05:08:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
-      </class> <!-- br.com.saraiva.test.runners.CadastroRunner -->
+      </class> <!-- br.com.saraiva.test.runners.BuscaProdutoRunner -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

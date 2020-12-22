@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Dec 21 20:55:19 GMT-03:00 2020</td>
+<td>Started on:</td><td>Tue Dec 22 02:07:59 GMT-03:00 2020</td>
 </tr>
-<tr><td>Total time:</td><td>30 seconds (30045 ms)</td>
+<tr><td>Total time:</td><td>25 seconds (25344 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,18 +67,77 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='br.com.saraiva.test.runners.CadastroRunner.runScenario()'><b>runScenario</b><br>Test class: br.com.saraiva.test.runners.CadastroRunner<br>Test method: Cucumber IBPF Scenarios<br>Parameters: MassaYaml(id=1, nome=Senhor, sobrenome=Barriga, email=senhorbarriga@gmail.com, senha=Vila0123@@, cpf=50261378651, sexo=M, dataNascimento=01031970, telefone=11998766543, CEP=11702850, numeroCasa=3604), "SAR_0104-Cadastro_de_cliente_ja_cadastrado", "Cadastro"</td>
-<td></td>
-<td>27</td>
-<td>br.com.saraiva.test.runners.CadastroRunner@5f2108b5</td></tr>
+<td title='br.com.saraiva.test.runners.BuscaProdutoRunner.runScenario()'><b>runScenario</b><br>Test class: br.com.saraiva.test.runners.BuscaProdutoRunner<br>Test method: Cucumber IBPF Scenarios<br>Parameters: MassaYaml(id=1, nome=Senhor, sobrenome=Barriga, email=senhorbarriga@gmail.com, senha=Vila0123@@, cpf=50261378651, sexo=M, dataNascimento=01031970, telefone=11998766543, CEP=11702850, numeroCasa=3604), "SAR_TESTE-Busca_livro_fisico", "BuscaProduto"</td>
+<td><div><pre>org.openqa.selenium.InvalidElementStateException: invalid element state
+  (Session info: chrome=87.0.4280.88)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;SKAR1200667&apos;, ip: &apos;192.168.15.32&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\Users\DEREK~1.SZA\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:60248}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 12f626f3b16fc542ba10a12a58fba10b
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.clear(RemoteWebElement.java:124)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy19.clear(Unknown Source)
+	at br.com.saraiva.core.utils.SeleniumActions.insertText(SeleniumActions.java:63)
+	at br.com.saraiva.test.logic.HomeLogic.buscaProduto(HomeLogic.java:36)
+	at br.com.saraiva.test.steps.BuscaProdutoSteps.busco_pelo_livro_e_submeto(BuscaProdutoSteps.java:23)
+	at ?.busco pelo livro &quot;harry poter&quot; e submeto(classpath:features/buscaProduto.feature:18)
+</pre></div><a href='#' onClick='toggleBox("stack-trace866273692", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace866273692'><pre>org.openqa.selenium.InvalidElementStateException: invalid element state
+  (Session info: chrome=87.0.4280.88)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;SKAR1200667&apos;, ip: &apos;192.168.15.32&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\Users\DEREK~1.SZA\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:60248}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 12f626f3b16fc542ba10a12a58fba10b
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.clear(RemoteWebElement.java:124)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy19.clear(Unknown Source)
+	at br.com.saraiva.core.utils.SeleniumActions.insertText(SeleniumActions.java:63)
+	at br.com.saraiva.test.logic.HomeLogic.buscaProduto(HomeLogic.java:36)
+	at br.com.saraiva.test.steps.BuscaProdutoSteps.busco_pelo_livro_e_submeto(BuscaProdutoSteps.java:23)
+	at ?.busco pelo livro &quot;harry poter&quot; e submeto(classpath:features/buscaProduto.feature:18)
+</pre></div></td>
+<td>22</td>
+<td>br.com.saraiva.test.runners.BuscaProdutoRunner@1e127982</td></tr>
 </table><p>
 </body>
 </html>

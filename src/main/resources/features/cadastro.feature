@@ -2,6 +2,9 @@
 #SARAIVA
 @Cadastro
 Funcionalidade: Cadastro
+	Eu como usuário
+	Quero me cadastrar no site saraiva.com.br
+	Para que possa comprar livros e outros produtos
 
   Contexto: 
     Dado que o usuario entre no site

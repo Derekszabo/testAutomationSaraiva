@@ -3,14 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="br.com.saraiva.test.runners.CadastroRunner">
+      <class name="br.com.saraiva.test.runners.BuscaProdutoRunner">
         <methods>
           <include name="setUpClass"/>
-          <include name="runScenario" invocation-numbers="2 3 4 5"/>
+          <include name="runScenario" invocation-numbers="0"/>
           <include name="tearDownClass"/>
           <include name="afterScenario"/>
         </methods>
-      </class> <!-- br.com.saraiva.test.runners.CadastroRunner -->
+      </class> <!-- br.com.saraiva.test.runners.BuscaProdutoRunner -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

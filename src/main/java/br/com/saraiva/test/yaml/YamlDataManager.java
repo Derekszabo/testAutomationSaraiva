@@ -1,7 +1,7 @@
 package br.com.saraiva.test.yaml;
 
+import br.com.saraiva.test.yaml.service.BuscaProdutoTestData;
 import br.com.saraiva.test.yaml.service.CadastroTestData;
-import br.com.saraiva.test.yaml.service.CompraTestData;
 
 public class YamlDataManager {
 	private YamlDataManager() {
@@ -13,8 +13,8 @@ public class YamlDataManager {
 		switch (dataName.toUpperCase()) {
 		case "CADASTRO":
 			return new CadastroTestData().getTestData();
-		case "COMPRA":
-			return new CompraTestData().getTestData();
+		case "BUSCAPRODUTO":
+			return new BuscaProdutoTestData().getTestData();
 		default:
 			throw new RuntimeException(
 					"Arquivo de massa " + simpleName + " não encontrada, verificar nome da classe Runner");

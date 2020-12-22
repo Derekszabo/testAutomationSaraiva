@@ -193,4 +193,12 @@ public class SeleniumActions {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		return js.executeScript(cmd, param);
 	}
+
+	public List<String> readFromElements(List<WebElement> elements) {
+		List<String> list = new ArrayList<>();
+		for (WebElement webElement : elements) {
+			list.add(webElement.getText());
+		}
+		return list;
+	}
 }

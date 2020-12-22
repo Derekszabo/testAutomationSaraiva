@@ -7,13 +7,22 @@ import br.com.saraiva.core.webdriver.PageMaker;
 import lombok.Getter;
 
 @Getter
-public class CadastroPage implements PageMaker {
+public class LoginPage implements PageMaker {
+
+	@FindBy(xpath = "//input[@id='username']")
+	WebElement fldEmailLogin;
+
+	@FindBy(xpath = "//input[@id='password']")
+	WebElement fldSenhaLogin;
 
 	@FindBy(xpath = "//a[contains(text(),'CADASTRAR')]")
 	WebElement btnCadastrar;
 
 	@FindBy(xpath = "//button[@id='submit-1']")
 	WebElement btnEntrar;
+
+	@FindBy(xpath = "//button[@id='submit-1']")
+	WebElement btnEntrarOuCadastrar;
 
 	@FindBy(xpath = "//input[@id='InputNome1']")
 	WebElement fldNome;

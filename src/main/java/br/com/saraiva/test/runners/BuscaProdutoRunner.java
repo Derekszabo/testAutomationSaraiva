@@ -6,13 +6,13 @@ import io.cucumber.testng.CucumberOptions.SnippetType;
 
 @CucumberOptions(features = "classpath:features", //
 		glue = "br.com.saraiva.test.steps", //
-		tags = "@Cadastro", //
+		tags = "@BuscaProduto", //
 		plugin = { "json:target/cucumber-report/cucumber.json" }, //
 		monochrome = true, //
 		dryRun = false, //
 		snippets = SnippetType.CAMELCASE //
 
 )
-public class CadastroRunner extends TestNGHooks {
+public class BuscaProdutoRunner extends TestNGHooks {
 
 }
