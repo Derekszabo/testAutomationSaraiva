@@ -23,7 +23,9 @@ import br.com.saraiva.test.yaml.YamlDataManager;
 import io.cucumber.testng.CucumberFeatureWrapper;
 import io.cucumber.testng.PickleEventWrapper;
 import io.cucumber.testng.TestNGCucumberRunner;
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 @API(status = API.Status.STABLE)
 public abstract class TestNGHooks {
 	String testName;
@@ -31,7 +33,7 @@ public abstract class TestNGHooks {
 
 	@BeforeClass(alwaysRun = true)
 	public void setUpClass() {
-		System.out.println("Before class...");
+		log.info("Before class...");
 		try {
 			testNGCucumberRunner = new TestNGCucumberRunner(this.getClass());
 		} catch (Exception e) {
@@ -45,7 +47,7 @@ public abstract class TestNGHooks {
 		testName = pickleWrapper.toString().replace("\"", "");
 		Context.setTestData(testData);
 		Context.setup();
-		System.out.println(featureWrapper.toString() + ": " + testName);
+		log.info(featureWrapper.toString() + ": " + testName);
 		testNGCucumberRunner.runScenario(pickleWrapper.getPickleEvent());
 	}
 

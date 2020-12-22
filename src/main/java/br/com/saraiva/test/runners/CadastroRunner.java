@@ -6,7 +6,7 @@ import io.cucumber.testng.CucumberOptions.SnippetType;
 
 @CucumberOptions(features = "classpath:features", //
 		glue = "br.com.saraiva.test.steps", //
-		tags = "@SAR_0104", //
+		tags = "@SAR_0101", //
 		plugin = { "json:target/cucumber-report/cucumber.json" }, //
 		monochrome = true, //
 		dryRun = false, //
